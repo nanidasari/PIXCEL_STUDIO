@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixcel Studio — Branding, Packaging &amp; Social Design</title>
+<meta name="description" content="Pixcel Studio is a design studio crafting brand identities, packaging and social media creatives.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="dot"></span>Pixcel Studio</a>
+    <nav class="primary-nav" id="primary-nav">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="nav-cta">Start a project</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="hero-eyebrow" data-key="hero_eyebrow">Design studio</p>
+        <h1 data-key="hero_heading">We build brands pixel by pixel.</h1>
+        <p class="sub" data-key="hero_sub">Loading…</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#work" data-key="hero_cta_label">See the work</a>
+          <div class="hero-stat">
+            <span class="n" data-key="hero_stat_number">120+</span>
+            <span class="l" data-key="hero_stat_label">brands shipped</span>
+          </div>
+        </div>
+      </div>
+      <div class="pixel-grid" id="pixel-grid" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="num">01</span>
+        <h2>What we do</h2>
+      </div>
+      <div class="services-grid" id="services-grid">
+        <!-- populated from content/services.json -->
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="work">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="num">02</span>
+        <h2>Selected work</h2>
+      </div>
+      <div class="work-filters" id="work-filters"></div>
+      <div class="work-grid" id="work-grid">
+        <!-- populated from content/works.json -->
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="num">03</span>
+        <h2>What clients say</h2>
+      </div>
+      <div class="testi-grid" id="testi-grid">
+        <!-- populated from content/testimonials.json -->
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2 data-key="about_heading">Every pixel is a decision.</h2>
+      <div class="about-body">
+        <p data-key="about_body">Loading…</p>
+        <p class="founder" data-key="about_founder_name">Studio note</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div>
+        <h2 data-key="contact_heading">Start a project</h2>
+        <p class="lede" data-key="contact_body">Loading…</p>
+        <ul class="contact-details">
+          <li><span class="k">Email</span><span data-key="contact_email">—</span></li>
+          <li><span class="k">Phone</span><span data-key="contact_phone">—</span></li>
+          <li><span class="k">Location</span><span data-key="contact_location">—</span></li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none">
+          <label>Don't fill this out: <input name="bot-field"></label>
+        </p>
+        <div>
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" required>
+        </div>
+        <div>
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" required>
+        </div>
+        <div>
+          <label for="cf-message">Project details</label>
+          <textarea id="cf-message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send message</button>
+        <p class="form-note" id="form-note">Submits directly via Netlify Forms once deployed on Netlify — see README.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-key="footer_note">Pixcel Studio</span>
+    <span id="year-note"></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

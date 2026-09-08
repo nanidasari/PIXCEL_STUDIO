@@ -1,0 +1,94 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Netlify Identity + git-gateway handles login/auth — no server or database needed.
+# See README.md for the one-time setup on Netlify.
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+
+collections:
+
+  - name: "site"
+    label: "Site content"
+    files:
+      - name: "site"
+        label: "Hero, about & contact"
+        file: "content/site.json"
+        fields:
+          - { label: "Hero — eyebrow label", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero — heading", name: "hero_heading", widget: "string" }
+          - { label: "Hero — subheading", name: "hero_sub", widget: "text" }
+          - { label: "Hero — button label", name: "hero_cta_label", widget: "string" }
+          - { label: "Hero — stat number", name: "hero_stat_number", widget: "string" }
+          - { label: "Hero — stat label", name: "hero_stat_label", widget: "string" }
+          - { label: "About — heading", name: "about_heading", widget: "string" }
+          - { label: "About — body", name: "about_body", widget: "text" }
+          - { label: "About — note / byline", name: "about_founder_name", widget: "string" }
+          - { label: "Contact — heading", name: "contact_heading", widget: "string" }
+          - { label: "Contact — body", name: "contact_body", widget: "text" }
+          - { label: "Contact — email", name: "contact_email", widget: "string" }
+          - { label: "Contact — phone", name: "contact_phone", widget: "string" }
+          - { label: "Contact — location", name: "contact_location", widget: "string" }
+          - { label: "Footer note", name: "footer_note", widget: "string" }
+
+  - name: "services"
+    label: "Services"
+    files:
+      - name: "services"
+        label: "Services list"
+        file: "content/services.json"
+        fields:
+          - label: "Services"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Code (e.g. 01)", name: "code", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - label: "Deliverables"
+                name: "deliverables"
+                widget: "list"
+
+  - name: "works"
+    label: "Portfolio / Work"
+    files:
+      - name: "works"
+        label: "Work items"
+        file: "content/works.json"
+        fields:
+          - label: "Projects"
+            name: "items"
+            widget: "list"
+            summary: "{{title}} — {{category}}"
+            fields:
+              - { label: "Project title", name: "title", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Branding", "Packaging", "Social Media Creatives"]
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Palette (2–3 hex colours, used as a placeholder swatch)"
+                name: "palette"
+                widget: "list"
+
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - name: "testimonials"
+        label: "Testimonials list"
+        file: "content/testimonials.json"
+        fields:
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role / company", name: "role", widget: "string" }

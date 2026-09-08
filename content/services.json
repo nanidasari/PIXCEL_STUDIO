@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "code": "01",
+      "title": "Branding",
+      "summary": "Identity systems built to survive a hundred touchpoints — logo, typography, colour, voice, and the rules that hold it together.",
+      "deliverables": [
+        "Logo & mark",
+        "Type & colour system",
+        "Brand guidelines",
+        "Stationery"
+      ]
+    },
+    {
+      "code": "02",
+      "title": "Packaging",
+      "summary": "Structural and print design for boxes, labels and pouches that hold up on a shelf and in a hand.",
+      "deliverables": [
+        "Structural design",
+        "Print-ready artwork",
+        "Label systems",
+        "Unboxing detail"
+      ]
+    },
+    {
+      "code": "03",
+      "title": "Social Media Creatives",
+      "summary": "Ongoing creative for feeds and stories — templated systems so your team can post fast without losing consistency.",
+      "deliverables": [
+        "Post & story templates",
+        "Campaign creatives",
+        "Content calendars",
+        "Motion snippets"
+      ]
+    }
+  ]
+}
